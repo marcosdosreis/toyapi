@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository
 @Repository
 interface UserRepository : MongoRepository<User, String> {
 
-    fun findByLogin(login: String) : List<User>
+    fun findByLogin(login: String) : User?
 
     fun findByNameContaining(name: String) : List<User>
 

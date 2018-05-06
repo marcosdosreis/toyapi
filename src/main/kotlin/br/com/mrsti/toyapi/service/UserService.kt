@@ -15,7 +15,7 @@ class UserService {
         return userRepository.findAll()
     }
 
-    fun findUserByLogin(login: String) : List<User> {
+    fun findUserByLogin(login: String) : User? {
         return userRepository.findByLogin(login)
     }
 

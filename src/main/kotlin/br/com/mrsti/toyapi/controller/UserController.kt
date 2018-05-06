@@ -13,7 +13,7 @@ class UserController {
     lateinit var userService: UserService
 
     @GetMapping("/login/{login}")
-    fun findByLogin (@PathVariable(value = "login") login : String) : List<User> {
+    fun findByLogin (@PathVariable(value = "login") login : String) : User? {
         return userService.findUserByLogin(login)
     }
 
